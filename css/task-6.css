@@ -1,0 +1,51 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body{
+    padding: 24px;
+    display: flex;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 16px;
+    background: #fff;
+    border-radius: 8px;
+}
+#controls{
+    border-radius: 8px;
+    padding: 32px;
+    background: #f6f6fe;
+    display: flex;
+    gap: 16px;
+    /* align-items: flex-start; */
+}
+#controls input{
+display: block;
+text-align: center;
+border: 1px solid #808080;
+border-radius: 8px;
+padding: 8px 0;
+min-width: 150px;
+}
+
+#controls button {
+    min-width: 120px;
+}
+button[data-destroy] {
+    background-color: #ff3b3b;
+}
+button[data-destroy]:hover,
+button[data-destroy]:focus {
+    background: #ff7070;
+}
+
+#boxes {
+    display: flex;
+    border-radius: 8px;
+    padding: 32px;
+    background: #f6f6fe;
+    width: auto;
+    gap: 44px;
+}
