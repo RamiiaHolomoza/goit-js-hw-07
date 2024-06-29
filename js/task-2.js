@@ -24,3 +24,24 @@ const images = [
     alt: "Lighthouse Coast Sea",
   }
 ];
+
+const ulElement = document.querySelector('.gallery')
+// console.log(ulElement)
+
+function createImagesMarkup(images) {
+  return images
+    .map(
+      (image) => `<li>
+      <img src="${image.url}" alt="${image.alt}"/>
+    </li>`
+    )
+    .join("");
+}
+
+const imagesMarkup = createImagesMarkup(images);
+// console.log(imagesMarkup)
+
+ulElement.insertAdjacentHTML("beforeend", imagesMarkup);
+// Ти можеш створити й додати HTML - елементи, використовуючи
+// document.createElement() і elem.append() або шаблонні рядки і
+// elem.insertAdjacentHTML()
